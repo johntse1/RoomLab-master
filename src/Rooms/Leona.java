@@ -2,23 +2,22 @@ package Rooms;
 
 import People.Person;
 
-public class gunslinger extends Room
+public class Leona extends Room
 {
-    public gunslinger(int x, int y)
+    public Leona(int x, int y)
     {
-        super(x, y);
+        super(x,y);
     }
-
     public void enterRoom(Person x)
     {
+        System.out.println("The sun burns with you.");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("PowPowKerChow! You see the bullets of Jhin fly past you.");
-        System.exit(0);
     }
     public void leaveRoom(Person x)
     {
         occupant = null;
     }
 }
+

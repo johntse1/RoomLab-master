@@ -1,10 +1,8 @@
 package Game;
 
-import People.Person;
-import Rooms.Room;
-import Rooms.WinningRoom;
-import Rooms.gunslinger;
-
+import People.*;
+import Rooms.*;
+import Game.*;
 import java.util.Scanner;
 
 public class Runner {
@@ -14,34 +12,16 @@ public class Runner {
 	
 	public static void main(String[] args)
 	{
-		Room[][] building = new Room[4][4];
-		
-		//Fill the building with normal rooms
-		for (int x = 0; x<building.length; x++)
-		{
-			for (int y = 0; y < building[x].length; y++)
-			{
-				building[x][y] = new Room(x,y);
-			}
-		}
-		
-		//Create a random winning room.
-		int x = (int)(Math.random()*building.length);
-		int y = (int)(Math.random()*building.length);
-		building[x][y] = new WinningRoom(x, y);
-		int a = (int)(Math.random()*building.length);
-		int b = (int)(Math.random()*building.length);
-		building[a][b] = new gunslinger(a, b);
-		 
-		 //Setup player 1 and the input scanner
+		int Health = 100;
+		//Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
-		building[0][0].enterRoom(player1);
+		summonersRift[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");
 			String move = in.nextLine();
-			if(validMove(move, player1, building))
+			if(validMove(move, player1, summonersRift))
 			{
 				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
 				
@@ -54,7 +34,6 @@ public class Runner {
 		}
 		in.close();
 	}
-
 	/**
 	 * Checks that the movement chosen is within the valid game map.
 	 * @param move the move chosen
@@ -62,7 +41,7 @@ public class Runner {
 	 * @param map the 2D array of rooms
 	 * @return
 	 */
-	public static boolean validMove(String move, Person p, Room[][] map)
+	public static boolean validMove(String move, Person p, Board[][] map)
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {
