@@ -21,7 +21,7 @@ public class Runner
 		while(gameOn)
 		{
 			summonersRift.printMap();
-			System.out.println("Where would you like to move? (Choose N, S, E, W)");
+			System.out.println("Where would you like to move? (Choose W, A, S, D)");
 			String move = in.nextLine();
 			if(validMove(move, summoner, summonersRift.makeRift()))
 			{
@@ -47,7 +47,7 @@ public class Runner
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {
-			case "n":
+			case "w":
 				if (person.getxLoc() > 0)
 				{
 					map[person.getxLoc()][person.getyLoc()].leaveRoom(person);
@@ -58,7 +58,7 @@ public class Runner
 				{
 					return false;
 				}
-			case "e":
+			case "d":
 				if (person.getyLoc()< map[person.getyLoc()].length -1)
 				{
 					map[person.getxLoc()][person.getyLoc()].leaveRoom(person);
@@ -82,7 +82,7 @@ public class Runner
 					return false;
 				}
 
-			case "w":
+			case "a":
 				if (person.getyLoc() > 0)
 				{
 					map[person.getxLoc()][person.getyLoc()].leaveRoom(person);

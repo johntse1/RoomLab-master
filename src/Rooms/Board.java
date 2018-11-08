@@ -74,15 +74,17 @@ public class Board
         //XinZhao
         summonersRift[8][8] = new XinZhao(8,8 );
         //Walls
-        for (int x = 0; x <= 21; x++) {
+        for (int x = 0; x <= 21; x++)
+        {
             int i = (int) (Math.random() * 9);
             int j = (int) (Math.random() * 9);
-            summonersRift[i][j] = new Wall(i, j);
+            if((i == 0)&&(j == 0))
+            {
+                summonersRift[i][j] = new Wall(1,2);
+            }
+            else {
+                summonersRift[i][j] = new Wall(i, j);
+            }
         }
-    }
-    public void makePersonRoom()
-    {
-        this.xLoc = xLoc;
-        this.yLoc = yLoc;
     }
 }
