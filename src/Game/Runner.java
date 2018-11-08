@@ -26,7 +26,7 @@ public class Runner
 			{
 
 				System.out.println("Your coordinates " + Name +": row = " + summoner.getxLoc() + " col = " + summoner.getyLoc());
-				System.out.println("Your health is " + summoner.loseHealth());
+				System.out.println("Your health is " + summoner.getHealth());
 			}
 			else
 			{
