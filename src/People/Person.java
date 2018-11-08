@@ -3,12 +3,13 @@ package People;
 /**
  * Person represents the player as they move through the game.
  */
-public class Person {
-	String firstName;
-	String familyName;
-	int xLoc, yLoc;
-	int Health;
-	String Drop;
+public class Person
+{
+	private String firstName;
+	private String familyName;
+	private int xLoc, yLoc;
+	private int Health;
+	private String Drop;
 
 	public int getxLoc() {
 		return xLoc;
@@ -38,5 +39,9 @@ public class Person {
 	public String toString()
 	{
 		return "[p]";
+	}
+	public int getHealth()
+	{
+		return Health;
 	}
 }

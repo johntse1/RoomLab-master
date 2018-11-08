@@ -1,7 +1,7 @@
 package Rooms;
 
 import People.Person;
-public class gunslinger extends Room implements Runner
+public class gunslinger extends Room
 {
     public gunslinger(int x, int y)
     {
@@ -14,6 +14,7 @@ public class gunslinger extends Room implements Runner
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         System.out.println("PowPowKerChow! You see the bullets of Jhin fly past you.");
+
     }
     public void leaveRoom(Person x)
     {
