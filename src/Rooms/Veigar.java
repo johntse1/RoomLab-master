@@ -19,5 +19,9 @@ public class Veigar extends Room
     {
         occupant = null;
     }
+    public String toString()
+    {
+        return "[x]";
+    }
 }
 

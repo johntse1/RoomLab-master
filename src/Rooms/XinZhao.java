@@ -18,4 +18,8 @@ public class XinZhao extends Room
     {
         occupant = null;
     }
+    public String toString()
+    {
+        return "[x]";
+    }
 }

@@ -18,12 +18,11 @@ public class Room {
 	 */
 	public void enterRoom(Person x)
 	{
-		System.out.println("You enter a plain old room");
+		System.out.println("You wander across the harsh land");
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 	}
-
 	/**
 	 * Removes the player from the room.
 	 * @param x
@@ -32,5 +31,4 @@ public class Room {
 	{
 		occupant = null;
 	}
-	
 }

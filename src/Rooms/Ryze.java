@@ -19,4 +19,8 @@ public class Ryze extends Room
     {
         occupant = null;
     }
+    public String toString()
+    {
+        return "[x]";
+    }
 }

@@ -19,5 +19,9 @@ public class Leona extends Room
     {
         occupant = null;
     }
+    public String toString()
+    {
+        return "[x]";
+    }
 }
 

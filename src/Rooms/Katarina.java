@@ -19,4 +19,8 @@ public class Katarina extends Room
     {
         occupant = null;
     }
+    public String toString()
+    {
+        return "[x]";
+    }
 }

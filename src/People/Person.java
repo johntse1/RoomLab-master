@@ -7,7 +7,8 @@ public class Person {
 	String firstName;
 	String familyName;
 	int xLoc, yLoc;
-
+	int Health;
+	String Drop;
 
 	public int getxLoc() {
 		return xLoc;
@@ -25,13 +26,17 @@ public class Person {
 		this.yLoc = yLoc;
 	}
 
-	public Person (String firstName, String familyName, int xLoc, int yLoc)
+	public Person (String firstName, String familyName, int xLoc, int yLoc, int Health, String Drop)
 	{
 		this.firstName = firstName;
 		this.familyName = familyName;
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
+		this.Health = Health;
+		this.Drop = Drop;
 	}
-
-
+	public String toString()
+	{
+		return "[p]";
+	}
 }
