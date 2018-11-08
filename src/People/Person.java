@@ -44,4 +44,20 @@ public class Person
 	{
 		return Health;
 	}
+	public void setHealth(int num)
+	{
+		 this.Health = num;
+	}
+	public String getFirstName()
+	{
+		return firstName;
+	}
+	public String getFamilyName()
+	{
+		return familyName;
+	}
+	public String getDrop()
+	{
+		return Drop;
+	}
 }

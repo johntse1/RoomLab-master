@@ -30,9 +30,9 @@ public class Board
         {
             for(int k=0;k<summonersRift[i].length;k++)
             {
-                System.out.print("[ ]");
+                System.out.print(summonersRift[i][k]);
             }
-            System.out.println("[ ]");
+            System.out.print("\n");
         }
     }
     Person occupant;
@@ -73,5 +73,16 @@ public class Board
         summonersRift[6][6] = new Veigar(6,6 );
         //XinZhao
         summonersRift[8][8] = new XinZhao(8,8 );
+        //Walls
+        for (int x = 0; x <= 21; x++) {
+            int i = (int) (Math.random() * 9);
+            int j = (int) (Math.random() * 9);
+            summonersRift[i][j] = new Wall(i, j);
+        }
+    }
+    public void makePersonRoom()
+    {
+        this.xLoc = xLoc;
+        this.yLoc = yLoc;
     }
 }

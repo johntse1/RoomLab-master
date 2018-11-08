@@ -13,6 +13,7 @@ public class gunslinger extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         System.out.println("PowPowKerChow! You see the bullets of Jhin fly past you.");
+        x.setHealth(x.getHealth()-10);
     }
     public void leaveRoom(Person x)
     {

@@ -20,6 +20,7 @@ public class Runner
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
+			summonersRift.printMap();
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");
 			String move = in.nextLine();
 			if(validMove(move, summoner, summonersRift.makeRift()))
