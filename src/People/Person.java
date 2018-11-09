@@ -10,6 +10,7 @@ public class Person
 	private int xLoc, yLoc;
 	private int Health;
 	private String Drop;
+	private int Attack;
 
 	public int getxLoc() {
 		return xLoc;
@@ -27,14 +28,14 @@ public class Person
 		this.yLoc = yLoc;
 	}
 
-	public Person (String firstName, String familyName, int xLoc, int yLoc, int Health, String Drop)
+	public Person (String firstName, String familyName, int xLoc, int yLoc, int Health, int Attack, String Drop)
 	{
 		this.firstName = firstName;
 		this.familyName = familyName;
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
 		this.Health = Health;
-		this.Drop = Drop;
+		this.Attack = Attack;
 	}
 	public String toString()
 	{
@@ -48,6 +49,14 @@ public class Person
 	{
 		 this.Health = num;
 	}
+	public int getAttack()
+	{
+		return Attack;
+	}
+	public void setAttack(int att)
+	{
+		this.Attack = att;
+	}
 	public String getFirstName()
 	{
 		return firstName;
@@ -56,8 +65,25 @@ public class Person
 	{
 		return familyName;
 	}
-	public String getDrop()
+	public String getDrop(String item)
 	{
+		if(item.equals("DFG"))
+		{
+			setAttack(getAttack()+10);
+		}
+		if(item.equals("GuardianAngel"))
+		{
+			setHealth(getHealth()+100);
+		}
+		if(item.equals("HealthPot"))
+		{
+			setHealth(getHealth()+10);
+			setAttack(getAttack()-10);
+		}
+		if(item.equals("UselessLargeRod"))
+		{
+			System.out.println("Haha you got nothing!!");
+		}
 		return Drop;
 	}
 	public void setDrop(String drop)

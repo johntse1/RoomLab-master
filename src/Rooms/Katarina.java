@@ -15,6 +15,8 @@ public class Katarina extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         x.setHealth(x.getHealth()-10);
+        x.setAttack(x.getAttack()+10);
+        x.setDrop(x.getDrop("HealthPot"));
     }
     public void leaveRoom(Person x)
     {

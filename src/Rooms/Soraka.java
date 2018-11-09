@@ -15,6 +15,8 @@ public class Soraka extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         x.setHealth(x.getHealth()+10);
+        x.setAttack(x.getAttack()+20);
+        x.setDrop(x.getDrop("DFG"));
     }
     public void leaveRoom(Person x)
     {

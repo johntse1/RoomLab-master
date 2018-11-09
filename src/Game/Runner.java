@@ -15,11 +15,15 @@ public class Runner
 		summonersRift.makeEnemyRooms();
 		summonersRift.printMap();
 		//Setup player 1 and the input scanner
-		Person summoner = new Person("FirstName", "FamilyName", 0,0, 100, "none");
+		Person summoner = new Person("FirstName", "FamilyName", 0,0, 100, 100, "none");
 		summonersRift.enterRoom(summoner, 0,0);
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
+			if(summoner.getHealth() == 0)
+			{
+				gameOn = false;
+			}
 			summonersRift.printMap();
 			System.out.println("Where would you like to move? (Choose W, A, S, D)");
 			String move = in.nextLine();

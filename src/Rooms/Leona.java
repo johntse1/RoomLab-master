@@ -15,6 +15,8 @@ public class Leona extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         x.setHealth(x.getHealth()+10);
+        x.setAttack(x.getAttack()-5);
+        x.setDrop(x.getDrop("UselessLargeRod"));
     }
     public void leaveRoom(Person x)
     {
