@@ -60,4 +60,8 @@ public class Person
 	{
 		return Drop;
 	}
+	public void setDrop(String drop)
+	{
+		this.Drop = drop;
+	}
 }
