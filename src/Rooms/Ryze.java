@@ -24,6 +24,10 @@ public class Ryze extends Room
     }
     public String toString()
     {
+        if(occupant!= null)
+        {
+            return "[p]";
+        }
         return "[x]";
     }
 }

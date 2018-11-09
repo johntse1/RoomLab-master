@@ -33,6 +33,10 @@ public class Room {
 	}
 	public String toString()
 	{
+		if(occupant!= null)
+		{
+			return "[p]";
+		}
 		return "[ ]";
 	}
 }

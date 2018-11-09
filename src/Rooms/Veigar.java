@@ -24,7 +24,14 @@ public class Veigar extends Room
     }
     public String toString()
     {
-        return "[x]";
+        if(occupant!= null)
+        {
+            return "[p]";
+        }
+        else {
+            return "[x]";
+        }
     }
+
 }
 

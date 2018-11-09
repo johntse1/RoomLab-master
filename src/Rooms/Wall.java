@@ -1,7 +1,5 @@
 package Rooms;
 
-import People.Person;
-
 public class Wall extends Room
 {
     public Wall(int x, int y)
@@ -12,7 +10,7 @@ public class Wall extends Room
     {
         return "[^}";
     }
-    public void determineWall(Person x)
+    public void determineWall()
     {
         if(occupant!= null)
         {

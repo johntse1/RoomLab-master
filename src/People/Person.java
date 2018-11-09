@@ -11,20 +11,23 @@ public class Person
 	private int Health;
 	private String Drop;
 	private int Attack;
-
-	public int getxLoc() {
+	public int getxLoc()
+	{
 		return xLoc;
 	}
 
-	public void setxLoc(int xLoc) {
+	public void setxLoc(int xLoc)
+	{
 		this.xLoc = xLoc;
 	}
 
-	public int getyLoc() {
+	public int getyLoc()
+	{
 		return yLoc;
 	}
 
-	public void setyLoc(int yLoc) {
+	public void setyLoc(int yLoc)
+	{
 		this.yLoc = yLoc;
 	}
 
@@ -36,11 +39,9 @@ public class Person
 		this.yLoc = yLoc;
 		this.Health = Health;
 		this.Attack = Attack;
+		this.Drop = Drop;
 	}
-	public String toString()
-	{
-		return "[p]";
-	}
+
 	public int getHealth()
 	{
 		return Health;
@@ -56,14 +57,6 @@ public class Person
 	public void setAttack(int att)
 	{
 		this.Attack = att;
-	}
-	public String getFirstName()
-	{
-		return firstName;
-	}
-	public String getFamilyName()
-	{
-		return familyName;
 	}
 	public String getDrop(String item)
 	{

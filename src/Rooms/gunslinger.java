@@ -23,6 +23,10 @@ public class gunslinger extends Room
     }
     public String toString()
     {
+        if(occupant!= null)
+        {
+            return "[p]";
+        }
         return "[x]";
     }
 }

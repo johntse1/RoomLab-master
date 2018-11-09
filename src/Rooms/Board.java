@@ -58,21 +58,53 @@ public class Board
     public void makeEnemyRooms()
     {
         //WinningRoom
-        summonersRift[8][8] = new WinningRoom(8, 8);
+        for(int y = 0; y <5; y++) {
+            int a = (int) Math.random() * 8;
+            int b = (int) Math.random() * 8;
+            summonersRift[a][b] = new WinningRoom(a, b);
+        }
         //Katarina
-        summonersRift[0][3] = new Katarina(0, 3);
+        for(int y = 0; y <5; y++) {
+            int c = (int) Math.random() * 8;
+            int d = (int) Math.random() * 8;
+            summonersRift[c][d] = new Katarina(c, d);
+        }
         //Ryze
-        summonersRift[3][0] = new Ryze(3, 0);
+        for(int y = 0; y <5; y++) {
+            int a = (int) Math.random() * 8;
+            int b = (int) Math.random() * 8;
+            summonersRift[a][b] = new Ryze(a, b);
+        }
         //Jhin
-        summonersRift[3][3] = new gunslinger(3, 3);
+        for(int y = 0; y <5; y++) {
+            int a = (int) Math.random() * 8;
+            int b = (int) Math.random() * 8;
+            summonersRift[a][b] = new gunslinger(a, b);
+        }
         //Soraka
-        summonersRift[6][0] = new Soraka(6,0);
+        for(int y = 0; y <5; y++) {
+            int a = (int) Math.random() * 8;
+            int b = (int) Math.random() * 8;
+            summonersRift[a][b] = new Soraka(a, b);
+        }
         //Leona
-        summonersRift[0][6] = new Leona(0, 6);
+        for(int y = 0; y <5; y++) {
+            int a = (int) Math.random() * 8;
+            int b = (int) Math.random() * 8;
+            summonersRift[a][b] = new Leona(a, b);
+        }
         //Veigar
-        summonersRift[6][6] = new Veigar(6,6 );
+        for(int y = 0; y <5; y++) {
+            int a = (int) Math.random() * 8;
+            int b = (int) Math.random() * 8;
+            summonersRift[a][b] = new Veigar(a, b);
+        }
         //XinZhao
-        summonersRift[8][8] = new XinZhao(8,8 );
+        for(int y = 0; y <5; y++) {
+            int a = (int) Math.random() * 8;
+            int b = (int) Math.random() * 8;
+            summonersRift[a][b] = new XinZhao(a, b);
+        }
         //Walls
         for (int x = 0; x <= 21; x++)
         {
@@ -82,7 +114,8 @@ public class Board
             {
                 summonersRift[i][j] = new Wall(1,2);
             }
-            else {
+            else
+            {
                 summonersRift[i][j] = new Wall(i, j);
             }
         }

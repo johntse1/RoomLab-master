@@ -99,7 +99,6 @@ public class Runner
 				}
 			default:
 				break;
-					
 		}
 		return true;
 	}
