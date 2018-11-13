@@ -41,14 +41,13 @@ public class Person
 		this.Attack = Attack;
 		this.Drop = Drop;
 	}
-
 	public int getHealth()
 	{
 		return Health;
 	}
 	public void setHealth(int num)
 	{
-		 this.Health = num;
+		 Health = Health + num;
 	}
 	public int getAttack()
 	{
@@ -56,22 +55,25 @@ public class Person
 	}
 	public void setAttack(int att)
 	{
-		this.Attack = att;
+		Attack = Attack + att;
 	}
+	/*
+	 *Depending on what the champion drops, the items obtained change your stats to make the game a bit harder
+	 */
 	public String getDrop(String item)
 	{
 		if(item.equals("DFG"))
 		{
-			setAttack(getAttack()+10);
+			setAttack(30);
 		}
 		if(item.equals("GuardianAngel"))
 		{
-			setHealth(getHealth()+100);
+			setHealth(100);
 		}
 		if(item.equals("HealthPot"))
 		{
-			setHealth(getHealth()+10);
-			setAttack(getAttack()-10);
+			setHealth(30);
+			setAttack(-10);
 		}
 		if(item.equals("UselessLargeRod"))
 		{
@@ -81,6 +83,6 @@ public class Person
 	}
 	public void setDrop(String drop)
 	{
-		this.Drop = drop;
+		drop = drop;
 	}
 }

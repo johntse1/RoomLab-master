@@ -13,7 +13,6 @@ public class XinZhao extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        x.setHealth(x.getHealth()-10);
         x.setDrop(x.getDrop("DFG"));
     }
     public void leaveRoom(Person x)
@@ -26,6 +25,8 @@ public class XinZhao extends Room
         {
             return "[p]";
         }
-        return "[x]";
+        else {
+            return "[x]";
+        }
     }
 }

@@ -18,7 +18,7 @@ public class Room {
 	 */
 	public void enterRoom(Person x)
 	{
-		System.out.println("You wander across the harsh land");
+		System.out.println("As you wander across the land, you see many eyes of the damned.");
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);

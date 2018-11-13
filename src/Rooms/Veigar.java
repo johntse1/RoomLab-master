@@ -14,8 +14,7 @@ public class Veigar extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        x.setHealth(x.getHealth()-1000);
-        x.setAttack(x.getAttack()-500);
+        x.setHealth(-5);
         x.setDrop(x.getDrop("DFG"));
     }
     public void leaveRoom(Person x)
